@@ -40,7 +40,9 @@ class MainActivity : ComponentActivity() {
                     }
 
                     if (allPermissionsGranted) {
-                        MainDashboardScreen()
+                        MainDashboardScreen(onLockTestClick = {
+                            // TODO: 임시로 비워둠
+                        })
                     } else {
                         OnboardingScreen(onPermissionsGranted = {
                             allPermissionsGranted = PermissionUtil.areAllPermissionsGranted(this@MainActivity)
